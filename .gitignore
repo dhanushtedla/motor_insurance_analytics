@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.pem
+*.key
+.ipynb_checkpoints/
+.pytest_cache/
+logs/*.log
+data/cleaned/

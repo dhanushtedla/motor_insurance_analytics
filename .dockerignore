@@ -1,0 +1,13 @@
+.git
+.gitignore
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+*.pem
+.ipynb_checkpoints/
+notebooks/
+tests/
+logs/*.log
+data/cleaned/
