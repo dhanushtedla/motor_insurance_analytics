@@ -28,4 +28,9 @@ customers 1 ───< policies >─── 1 vehicles
 | policies | policy_id | customer_id, vehicle_id |
 | claims | claim_id | policy_id, customer_id |
 | payments | payment_id | claim_id, policy_id |
-
+Key decisions (be ready to explain them):
+* `approval_date` / `settlement_date` stay empty for pending / rejected claims on purpose.
+* 59 policies had an **end date before the start date** (all Cancelled). The row is kept (it has real premium and claims); only the wrong end date is blanked.
+* **Approved claims = Approved + Settled** (a settled claim was approved first). Approval rate = approved / total x 100.
+* `claim_amount` is the amount **requested**. Claim-to-premium = total claim amount / total premium.
+* Every vehicle in this data has `vehicle_type = Car`, so vehicle comparisons use make, fuel type and vehicle age.
